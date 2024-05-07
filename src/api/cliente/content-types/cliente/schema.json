@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "cliente"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clienteid": {
+      "type": "uid"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "pedidos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pedido.pedido",
+      "mappedBy": "clienteid"
+    }
+  }
+}
